@@ -1,0 +1,37 @@
+function Player1RollFourSixSidedDice(){
+  //Declare Variables
+  var die1Roll = 0;
+  var die2Roll = 0;
+  var die3Roll = 0;
+  var die4Roll = 0;
+
+  //Die logic
+  die1Roll = Math.floor(Math.random() * 6 + 1);
+  die2Roll = Math.floor(Math.random() * 6 + 1);
+  die3Roll = Math.floor(Math.random() * 6 + 1);
+  die4Roll = Math.floor(Math.random() * 6 + 1);
+
+  document.getElementById("player1Result1").innerHTML = "Die 1 result is: " + die1Roll + "\n";
+  document.getElementById("player1Result2").innerHTML = "Die 2 result is: " + die2Roll + "\n";
+  document.getElementById("player1Result3").innerHTML = "Die 3 result is: " + die3Roll + "\n";
+  document.getElementById("player1Result4").innerHTML = "Die 4 result is: " + die4Roll + "\n";
+}
+
+function Player2RollFourSixSidedDice(){
+  //Declare Variables
+  var die1Roll = 0;
+  var die2Roll = 0;
+  var die3Roll = 0;
+  var die4Roll = 0;
+
+  //Die logic
+  die1Roll = Math.floor(Math.random() * 6 + 1);
+  die2Roll = Math.floor(Math.random() * 6 + 1);
+  die3Roll = Math.floor(Math.random() * 6 + 1);
+  die4Roll = Math.floor(Math.random() * 6 + 1);
+
+  document.getElementById("player2Result1").innerHTML = "Die 1 result is: " + die1Roll + "\n";
+  document.getElementById("player2Result2").innerHTML = "Die 2 result is: " + die2Roll + "\n";
+  document.getElementById("player2Result3").innerHTML = "Die 3 result is: " + die3Roll + "\n";
+  document.getElementById("player2Result4").innerHTML = "Die 4 result is: " + die4Roll + "\n";
+}
