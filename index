@@ -39,7 +39,7 @@
 
       <!--Enter player 1 name to button-->
       <p id="Player1Dice">
-        <button type='button' onclick="Player1RollFourSixSidedDice()" id="player1RollButton"></button>
+        <button type='button' onclick="Player1RollFirstSixSidedDie();Player1RollSecondSixSidedDie();Player1RollThirdSixSidedDie();Player1RollFourthSixSidedDie()" id="player1RollButton"></button>
         <script>
         // Add Player name to Roll button
         document.getElementById("player1RollButton").innerHTML = player1 + " Roll your dice.";
@@ -48,8 +48,8 @@
 
       </p>
 
-      <p id="Player1Dice">
-        <button type='button' onclick="Player2RollFourSixSidedDice()" id="player2RollButton"></button>
+      <p id="Player2Dice">
+        <button type='button' onclick="Player2RollFirstSixSidedDie();Player2RollSecondSixSidedDie();Player2RollThirdSixSidedDie();Player2RollFourthSixSidedDie()" id="player2RollButton"></button>
         <script>
         // Add Player name to Roll button
         document.getElementById("player2RollButton").innerHTML = player2 + " Roll your dice.";
