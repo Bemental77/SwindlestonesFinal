@@ -1,25 +1,37 @@
+
+//Script for Player name entry
+function PlayerNameEntry (){
+var player1 = "Player1";
+var player2 = "Player2";
+
+
+// prompt players for names
+player1 = prompt("Please enter a name for Player 1.");
+player2 = prompt("Please enter a name for Player 2.");
+}
+
 function Player1RollFirstSixSidedDie() {
   //Variables needed for first die
   var die1Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die1Roll = Math.floor(Math.random() * 6 + 1);
 
   //Die 1 result logic and image display
   if (die1Roll === 1) {
-      document.getElementById("player1Result1").innerHTML = "Die 1 result is: " + die1Roll + "\n";
+      document.getElementById("player1Result1").innerHTML = player1 + " Die 1 result is: " + die1Roll + "\n";
       document.getElementById("player1Result1").appendChild(img1);
   } else if (die1Roll === 2) {
       document.getElementById("player1Result1").innerHTML = "Die 1 result is: " + die1Roll + "\n";
@@ -43,17 +55,17 @@ function Player1RollSecondSixSidedDie() {
   //Variables needed for first die
   var die2Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die2Roll = Math.floor(Math.random() * 6 + 1);
@@ -84,19 +96,19 @@ function Player1RollThirdSixSidedDie() {
   //Variables needed for first die
   var die3Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
-  //Die 1 math for random number
+  //Die 1 math for random number 
   die3Roll = Math.floor(Math.random() * 6 + 1);
 
   //Die 1 result logic and image display
@@ -125,17 +137,17 @@ function Player1RollFourthSixSidedDie() {
   //Variables needed for first die
   var die4Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die4Roll = Math.floor(Math.random() * 6 + 1);
@@ -170,17 +182,17 @@ function Player2RollFirstSixSidedDie() {
   //Variables needed for first die
   var die1Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die1Roll = Math.floor(Math.random() * 6 + 1);
@@ -211,17 +223,17 @@ function Player2RollSecondSixSidedDie() {
   //Variables needed for first die
   var die2Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die2Roll = Math.floor(Math.random() * 6 + 1);
@@ -252,17 +264,17 @@ function Player2RollThirdSixSidedDie() {
   //Variables needed for first die
   var die3Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die3Roll = Math.floor(Math.random() * 6 + 1);
@@ -293,17 +305,17 @@ function Player2RollFourthSixSidedDie() {
   //Variables needed for first die
   var die4Roll = 0;
   var img1 = document.createElement("img");
-  img1.src = "dice images/dice1.png";
+  img1.src = "diceImages/dice1.png";
   var img2 = document.createElement("img");
-  img2.src = "dice images/dice2.png";
+  img2.src = "diceImages/dice2.png";
   var img3 = document.createElement("img");
-  img3.src = "dice images/dice3.png";
+  img3.src = "diceImages/dice3.png";
   var img4 = document.createElement("img");
-  img4.src = "dice images/dice4.png";
+  img4.src = "diceImages/dice4.png";
   var img5 = document.createElement("img");
-  img5.src = "dice images/dice5.png";
+  img5.src = "diceImages/dice5.png";
   var img6 = document.createElement("img");
-  img6.src = "dice images/dice6.png";
+  img6.src = "diceImages/dice6.png";
 
   //Die 1 math for random number
   die4Roll = Math.floor(Math.random() * 6 + 1);
