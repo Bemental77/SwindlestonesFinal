@@ -1,0 +1,33 @@
+h1 {
+  color: blue;
+  text-align: center;
+  font-family: "Copperplate";
+  font-size: 60px;
+
+}
+
+body {
+  background-image: url(webpageImages/cementBackground.png);
+  color: black;
+  font-family: "Copperplate";
+  margin: 50px;
+  font-size: 20px;
+}
+
+p {
+  color: black;
+}
+
+output {
+  color: black;
+  padding: 30px;
+  margin: 30px;
+}
+
+script {
+  color: black;
+}
+
+button {
+  font-size: 30px;
+}
