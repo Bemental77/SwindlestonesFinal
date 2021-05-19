@@ -1,3 +1,4 @@
+
 h1 {
   color: blue;
   text-align: center;
@@ -30,4 +31,8 @@ script {
 
 button {
   font-size: 30px;
+}
+
+pre {
+  display: none;
 }
