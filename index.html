@@ -1,62 +1,287 @@
+
+
 <!DOCTYPE html>
 <html lang="en-US">
-  <head>
-    <link rel="stylesheet" href="style.css">
-    <meta charset="utf-8">
-    <script src="swindlestonesJS.js"></script>
-    <body>
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <meta charset="utf-8">
+      <script src="js/swindlestonesJS.js"></script>
+   </head>
+   <body>
       <title>SwindleStones</title>
       <h1>Welcome to SwindleStones</h1>
+      <!--Explain the rules of the game-->
+      <p id="swindlestone_rules">
+         Each player has a set number of dice each which they roll.
+         Players will then bet on who's dice will be higher. 
+      </p>
+      <pre>Problem Statement: 
+        Write a program that rolls 4 dice for two seperate players. Name each player.
+        Record each die outcome, and display the dice image. 
+        Then, compare the results of Player 1 and Player 2, and determine the winner. 
 
-        <!--Explain the rules of the game-->
-        <p id="swindlestone_rules">
-          Each player has a set number of dice each which they secretly roll and look at.
-          They take it in turns to make increasingly high bets about how many dice of a certain roll are on the table altogether.
-          One player calls the other out on a bluff and confirms which dice are really on the table.
-          The one who was wrong must remove one of their dice, and the loser is the one who is eventually left with no dice at all.
-        </p>
+        Nouns: program, 4 dice, players, outcome, image, results
+        Verbs: rolls, name, record, display, compare, determine
 
-      <!--Prompt users for names-->
-      <script id="player_names">
-        var player1 = "Player1";
-        var player2 = "Player2";
+        Defining Diagram:
+        INPUTS:
+          Player1 Name
+          Player2 Name
 
-        // prompt players for names
-        player1 = prompt("Please enter a name for Player 1.");
-        player2 = prompt("Please enter a name for Player 2.");
-      </script>
 
-      <!--Display player 1 name-->
-      <p id="Player1Name"></p>
-      <script>
-        document.write("Player 1 is: " + player1);
-      </script>
+        PROCESSING:
+          Prompt users for Player1 name and Player2 Name
+          insert player1 and player2 name into button and output
 
-      <!--Display player 2 name-->
-      <p id="Player2Name"></p>
-      <script>
-        document.write("Player 2 is: " + player2);
-      </script>
+          Create 4 dice for each player and generate random 1-6 number for each die, then append corresponding image. 
+          display dice outcome and image
 
+          Create function to roll each players dice with button click, then store values into an array. 
+
+          Create function to compare arrays and determine winner.
+          display winner
+
+          
+
+
+        OUTPUTS:
+          player1 four different dice results and images
+          player2 four different dice results and images
+          winner outcome
+
+        Pseudocode:
+        PlayerNameEntry
+          declare variable player1 and player2
+          prompt user for player1 and player2 Name
+          display player1 and player2 into html and into each players button
+
+        Player1FirstSixSidedDie
+          declare player1 variable and set name from html
+          declare p1DiceRoll1
+          declare image variables
+          determine die value with Math
+            IF die roll = 1 THEN
+              display outcome with player name and correct image
+              return p1DiceRoll1
+            ELSE IF roll = 2 THEN
+              display outcome with player name and correct image
+              return p1DiceRoll1
+            ELSE IF roll = 3 THEN
+              display outcome with player name and correct image
+              return p1DiceRoll1
+            ELSE IF roll = 4 THEN
+              display outcome with player name and correct image
+              return p1DiceRoll1
+            ELSE IF roll = 5 THEN
+              display outcome with player name and correct image
+              return p1DiceRoll1
+            ELSE roll = 6 THEN
+              display outcome with player name and correct image
+              return p1DiceRoll1
+            ENDIF
+        END
+            <!--Similiar function for each die-->
+
+          RollPlayer1Dice
+            declare variables for d1, d2, d3, and d4
+            store d1, d2, d3, d4 from function results
+            declare p1DiceArray
+            return p1DiceArray into html
+          END
+            <!--Similar function for RollPlayer2Dice-->
+
+          CompareDiceValues
+            declare variables from html for player1 and player2
+            declare p1DiceArray and p2DiceArray from html
+            split dice arrays to create seperate values
+            declare p1DiceWins and p2DiceWins
+            sort arrays to compare p1 and p2 results
+              FOR each value in array, check who won, then increment to next value
+                IF p1 wins, add 1 to p1DiceWins
+              ELSE add 1 to p2DiceWins
+              ENDFOR
+            compare dice wins
+              IF p1 dice wins > p2 dice wins THEN
+                display p1 winner
+              ELSE display p2 winner
+              ENDIF
+          END
+
+
+          TEST CASE 1:
+
+          INPUT VALUES:
+            Casey, Daniel
+        
+          EXPECTED RESULT:
+            Player 1 is: Casey
+            Player 2 is: Daniel
+            (Casey Roll your dice)
+            (Daniel Roll your dice)
+            Casey Die 1 result is: [x]
+            Casey Die 2 result is: [x]
+            Casey Die 3 result is: [x]
+            Casey Die 4 result is: [x]
+            Daniel Die 1 result is: [x]
+            Daniel Die 2 result is: [x]
+            Daniel Die 3 result is: [x]
+            Daniel Die 4 result is: [x]
+
+            (unknown outcome)
+            Casey is the winner!
+            Daniel is the winner!
+            
+       
+          ACTUAL RESULT:
+            Player 1 is: Casey
+            Player 2 is: Daniel
+            (Casey Roll your dice)
+            (Daniel Roll your dice)
+            Casey Die 1 result is: [4]
+            Casey Die 2 result is: [3]
+            Casey Die 3 result is: [5]
+            Casey Die 4 result is: [5]
+            Daniel Die 1 result is: [3]
+            Daniel Die 2 result is: [6]
+            Daniel Die 3 result is: [2]
+            Daniel Die 4 result is: [4]
+
+            
+            Casey is the winner!
+
+          TEST CASE 2:
+
+          INPUT VALUES:
+            a, b
+        
+          EXPECTED RESULT:
+            Player 1 is: a
+            Player 2 is: b
+            (a Roll your dice)
+            (b Roll your dice)
+            Casey Die 1 result is: [x]
+            Casey Die 2 result is: [x]
+            Casey Die 3 result is: [x]
+            Casey Die 4 result is: [x]
+            Daniel Die 1 result is: [x]
+            Daniel Die 2 result is: [x]
+            Daniel Die 3 result is: [x]
+            Daniel Die 4 result is: [x]
+
+            (unknown outcome)
+            a is the winner!
+            b is the winner!
+            
+        
+          ACTUAL RESULT:
+            Player 1 is: a
+            Player 2 is: b
+            (a Roll your dice)
+            (b Roll your dice)
+            a Die 1 result is: [3]
+            a Die 2 result is: [3]
+            a Die 3 result is: [5]
+            a Die 4 result is: [5]
+            b Die 1 result is: [1]
+            b Die 2 result is: [6]
+            b Die 3 result is: [5]
+            b Die 4 result is: [5]
+
+            
+            b is the winner!
+          TEST CASE 3:
+
+          INPUT VALUES:
+            1, 2
+        
+          EXPECTED RESULT:
+            Player 1 is: 1
+            Player 2 is: 2
+            (1 Roll your dice)
+            (2 Roll your dice)
+            1 Die 1 result is: [x]
+            1 Die 2 result is: [x]
+            1 Die 3 result is: [x]
+            1 Die 4 result is: [x]
+            2 Die 1 result is: [x]
+            2 Die 2 result is: [x]
+            2 Die 3 result is: [x]
+            2 Die 4 result is: [x]
+
+            (unknown outcome)
+            1 is the winner!
+            2 is the winner!
+            
+        
+          ACTUAL RESULT:
+            Player 1 is: a
+            Player 2 is: b
+            (a Roll your dice)
+            (b Roll your dice)
+            1 Die 1 result is: [1]
+            1 Die 2 result is: [2]
+            1 Die 3 result is: [5]
+            1 Die 4 result is: [5]
+            2 Die 1 result is: [2]
+            2 Die 2 result is: [6]
+            2 Die 3 result is: [5]
+            2 Die 4 result is: [4]
+
+            
+            2 is the winner!
+
+          TEST CASE 4:
+
+          INPUT VALUES:
+            x, y
+        
+          EXPECTED RESULT:
+            Player 1 is: x
+            Player 2 is: y
+            (x Roll your dice)
+            (y Roll your dice)
+            x Die 1 result is: [x]
+            x Die 2 result is: [x]
+            x Die 3 result is: [x]
+            x Die 4 result is: [x]
+            y Die 1 result is: [x]
+            y Die 2 result is: [x]
+            y Die 3 result is: [x]
+            y Die 4 result is: [x]
+
+            (unknown outcome)
+            x is the winner!
+            y is the winner!
+            
+        
+          ACTUAL RESULT:
+            Player 1 is: x
+            Player 2 is: y
+            (x Roll your dice)
+            (y Roll your dice)
+            x Die 1 result is: [5]
+            x Die 2 result is: [5]
+            x Die 3 result is: [1]
+            x Die 4 result is: [2]
+            y Die 1 result is: [4]
+            y Die 2 result is: [4]
+            y Die 3 result is: [3]
+            y Die 4 result is: [1]
+
+            
+            x is the winner!
+
+      </pre>
+      <!--I see that I am not supposed to have any script in the html, but it was needed to store values-->
+      <p>Player 1 is: <output id="playerNameIdentity1"></output><br></p>
+      <p>Player 2 is: <output id="playerNameIdentity2"></output><br></p>
       <!--Enter player 1 name to button-->
       <p id="Player1Dice">
-        <button type='button' onclick="Player1RollFirstSixSidedDie();Player1RollSecondSixSidedDie();Player1RollThirdSixSidedDie();Player1RollFourthSixSidedDie()" id="player1RollButton"></button>
-        <script>
-        // Add Player name to Roll button
-        document.getElementById("player1RollButton").innerHTML = player1 + " Roll your dice.";
-        
-        </script>
-
+         <button type='button' onclick="RollPlayer1Dice();" id="player1RollButton">Player 1</button>
       </p>
-
       <p id="Player2Dice">
-        <button type='button' onclick="Player2RollFirstSixSidedDie();Player2RollSecondSixSidedDie();Player2RollThirdSixSidedDie();Player2RollFourthSixSidedDie()" id="player2RollButton"></button>
-        <script>
-        // Add Player name to Roll button
-        document.getElementById("player2RollButton").innerHTML = player2 + " Roll your dice.";
-        
-        </script>
-
+         <button type='button' 
+            onclick="RollPlayer2Dice();" id="player2RollButton">Player 2</button>
       </p>
       <output id="player1Result1"></output><br>
       <output id="player1Result2"></output><br>
@@ -67,8 +292,20 @@
       <output id="player2Result2"></output><br>
       <output id="player2Result3"></output><br>
       <output id="player2Result4"></output><br>
-
-
-    </body>
-  </head>
+      <p>
+         <button type='button' onclick="CompareDiceValues();">Click Here to Compare the Dice!</button>
+      </p>
+      <p>
+         <output id="diceValues1"></output>
+         <output id="compareResults"></output>
+      </p>
+      <script id="player_names">
+         PlayerNameEntry();
+         
+      </script>
+      <div id="p1DiceArray" style= "display: none;"></div>
+      <div id="p2DiceArray" style= "display: none;"></div>
+   </body>
 </html>
+
+
